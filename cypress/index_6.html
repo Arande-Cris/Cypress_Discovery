@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cypress Discovery
+    </title>
+</head>
+
+<body>
+    <!-- <h1> Olá, <span id="nome"></span></h1> -->
+
+    <h1>CNH</h1>
+
+    <input type="text" name="nome" placeholder="Seu primeiro nome" />
+    <input type="number" name="idade" placeholder="Sua idade" />
+    <button type="button" onClick="verificarIdade()">Verificar Idade</button>
+    <h1>Vingadores</h1>
+
+    <button type="button" onClick="listaVingadores()">Listar Vingadores</button>
+
+    <ul id="avengersList"></ul>
+
+    <script type="text/javascript">
+
+
+        //API
+        var avengers = ['Tony Stark', 'Clint Barton', 'Natasha Romanoffer', 'Steve Rogers', 'Arande Souza']
+
+        function listaVingadores() {
+
+            var ul = document.getElementById('avengersList')
+            ul.innerHTML= ''
+
+            avengers.forEach(function (a){
+
+                var li = document.createElement('li')
+                var text = document.createTextNode(a)
+                li.appendChild(text)
+                ul.appendChild(li)
+              
+
+            })
+        }
+
+        
+
+    </script>
+</body>
+
+</html>
